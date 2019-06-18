@@ -1,0 +1,26 @@
+Ping explained:
+===============
+- Ping(Packet Internet Groper) is most commonly used tool to troubleshoot a network.
+- It uses ICMP(Internet Control Message protocol).
+- Ping works by sending an ICMP echo request message to the specified IP address.
+- If the computer with the destination IP address is reachable , it responds with an ICMP echo reply message.
+
+
+
+Usage and Output:
+=================
+C:\Users\ddr>ping -n 5 google.com
+
+Pinging google.com [172.217.166.110] with 32 bytes of data:
+Reply from 172.217.166.110: bytes=32 time=9ms TTL=54
+Reply from 172.217.166.110: bytes=32 time=9ms TTL=54
+Reply from 172.217.166.110: bytes=32 time=9ms TTL=54
+Reply from 172.217.166.110: bytes=32 time=9ms TTL=54
+Reply from 172.217.166.110: bytes=32 time=9ms TTL=54
+
+Ping statistics for 172.217.166.110:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 9ms, Maximum = 9ms, Average = 9ms
+	
+	

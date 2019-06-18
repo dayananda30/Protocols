@@ -1,0 +1,56 @@
+Trace-Route:
+============
+- Traceroute is a commandline interface tool used to identify the path used to identify the path used by a packet to reach its target.
+- Uses ICMP messages, traceroute sends a series of ICMP echo request packets to a destination.
+- First series of messages, TTL(Time To Live) is set to 1, which means that the first router in a path will discard the packet and an ICMP Time Exceeding message.
+- TTL : which is the number of routers(hops) it can pass through before the packet is discarded.
+- It uses UDP packets with a large destination port number(33434 to 33534) that is unlikely to be used by any application at the destination host.
+- How it Works:
+- Step 1 : Trace-Route works by setting the TTL for a packet to 1, sending it towards the requested destination host and listening for the reply.
+- Step 2 : When the initiating machine receives a "time exceeded" response, it examines the packet to determine wherer the packet came from.
+- Step 3 : Then the tracing machine generates a new packet with TTL 2 and so on.
+
+
+Command Usage:
+===============
+
+tracert in windows and traceroute in linux non windows families.
+
+C:\Users\ddr>tracert www.youtube.com
+
+Tracing route to youtube-ui.l.google.com [216.58.200.142]
+over a maximum of 30 hops:
+
+  1     1 ms     1 ms     1 ms  10.212.231.254
+  2     *        *        *     Request timed out. [If ICMP req messages are blocked by any machines then we will get this error.]
+  3     *        *        *     Request timed out.
+  4     *        *        *     Request timed out.
+  5     *        *        *     Request timed out.
+  6     *        *        *     Request timed out.
+  7     *        *        *     Request timed out.
+  8     *        *        *     Request timed out.
+  9     *        *        *     Request timed out.
+ 10     *        *        *     Request timed out.
+ 11     *        *        *     Request timed out.
+ 12    11 ms    12 ms    11 ms  maa05s10-in-f14.1e100.net [216.58.200.142]
+
+Trace complete.
+
+
+
+Why three columns for time in the output?
+=========================================
+Trace-Route sends out three packets per TTL increment. Each column corresponds to the time took to get one packet back(round-trip-time).
+The number in milli seconds is the network latency between you and the hop.
+
+
+
+
+
+
+
+
+
+
+
+

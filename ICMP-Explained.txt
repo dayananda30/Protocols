@@ -1,0 +1,12 @@
+ICMP(Internet Control Message Protocol):
+========================================
+- ICMP is a network layer protocol that provides information related to packet processing.
+- Commonly used by network tools such as ping or traceroute
+- It sends Echo request and expects echo reply
+- ICMP messages are encapsulated in IP datagrams, which means they don't use higher level protocols (such as TCP r UDP) for transmission.
+
+
+IP Datagram:
+============
+- The format of data that can be recognized by IP is called an IP datagram.
+- It consists of two components namely,  the header and data which needs to be transmitted.

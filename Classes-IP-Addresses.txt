@@ -1,0 +1,49 @@
+Classes of IP Addresses:
+========================
+- There are 5 classes of IP addresses: Class A, B, C, D and E.
+- Each class has a range of valid IP addresses.
+- The value of first octet determines the class which belongs to?
+- IP addresses from Class(A,B,C) can be used for host IP address.
+- Class D IP addresses used for multicast.
+- Class E for experimental purposes.
+
+How these classes are formed?
+=============================
+- The classes are created depending on the network size.
+- For ex :  If you have a setup where many hosts but less networks then class A IP addresses are used.
+		    If you have a setup where less hosts but lot(numerous) of networks then class C IP addresses are used.
+		   
+Classes:
+========
+class		range	Subnet mask 
+Class A   	0-127		8
+Class B   	128-191		16
+Class C   	192-223		24
+Class D   	224-239		-
+Class E   	240-255		-
+
+
+- For the IP addresses from class A, the first 8bits(first decimal number) represent the network part, 
+	whiile the remaining 24 bits represent the host part.
+	
+- For Class B, the first 16 bits (the first two numbers) represent the network part, 
+	while the remaining 16 bits represent the host part. 
+
+- For Class C, the first 24 bits represent the network part, while the remaining 8 bits represent the host part.
+
+
+NOTE: This system of network address via classes are bypassed today by use of the "classless Inter-Domain Routing(CIDR)" addressing.
+
+
+Special IP address ranges that are used for special purposes are:
+=================================================================
+	0.0.0.0/8 – addresses used to communicate with the local network
+	127.0.0.0/8 – loopback addresses
+	169.254.0.0/16 – link-local addresses (APIPA)
+
+
+
+	
+	
+
+
